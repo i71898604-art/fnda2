@@ -196,3 +196,23 @@
         // Store Chart
         const ctxStore = document.getElementById('storeChart').getContext('2d');
         new Chart(ctxStore, {
+            type: 'doughnut',
+            data: {
+                labels: ['센트럴점', '파크점', '리버점'],
+                datasets: [{
+                    data: [223843230, 164589350, 136119960],
+                    backgroundColor: ['#4f46e5', '#38bdf8', '#cbd5e1'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
